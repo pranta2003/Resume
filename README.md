@@ -4,11 +4,11 @@ My professional resume and LaTeX source.
 
 ## Files
 
-[⬇️ Download My Resume (PDF)](./Pranta_Kumer_Pandit_Resume.pdf)
+[⬇️ Download My Resume (PDF)](./Pranta_resume_update_with_project.pdf)
 
-[👁️ View Resume Online](./Pranta_Kumer_Pandit_Resume.pdf)
+[👁️ View Resume Online](./Pranta_resume_update_with_project.pdf)
 
-[💻 View LaTeX Source](./Pranta_Kumer_Pandit_Resume.tex)
+[💻 View LaTeX Source](./Pranta_resume_update_with_project.tex)
 
 ## Contact
 
