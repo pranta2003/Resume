@@ -1,7 +1,8 @@
 \documentclass[11pt,a4paper]{article}
 
-% ---------------- Packages ----------------
-\usepackage[left=1in,right=1in,top=1in,bottom=1in]{geometry}
+% Compile with pdfLaTeX in Overleaf. newtx provides a Times New Roman-like
+% serif face without requiring a system-installed font.
+\usepackage[left=0.78in,right=0.78in,top=0.72in,bottom=0.72in]{geometry}
 \usepackage[T1]{fontenc}
 \usepackage{newtxtext,newtxmath}
 \usepackage{titlesec}
@@ -9,131 +10,142 @@
 \usepackage{graphicx}
 \usepackage{tabularx}
 \usepackage{hyperref}
+\usepackage{xcolor}
 \usepackage{array}
 
-\hypersetup{
-    colorlinks=true,
-    urlcolor=blue
-}
-
+\hypersetup{colorlinks=true,urlcolor=blue}
 \setlength{\parindent}{0pt}
-\setlist[itemize]{noitemsep, topsep=2pt}
+\setlist[itemize]{leftmargin=1.35em,itemsep=2pt,topsep=2pt,parsep=0pt}
+\raggedbottom
 
-% ---------------- Section Style ----------------
-\titleformat{\section}
-{\large\bfseries}
-{}
-{0em}
-{}
-[\titlerule]
+\titleformat{\section}{\large\bfseries}{}{0em}{}[\titlerule]
+\titlespacing*{\section}{0pt}{8pt}{4pt}
 
-% ---------------- Document ----------------
 \begin{document}
+
+% ---------------- Header: same clean name/contact + right-side photo layout
+% as the supplied reference template. ----------------
 \noindent
-\begin{minipage}[t]{0.68\textwidth}
+\begin{minipage}[t]{0.70\textwidth}
     \vspace{0pt}
-    \textbf{\LARGE Mehedi Hassan} \\[1mm]
-    mehedihassanalif2003@gmail.com \;\textbar\; 01781111990 \\ 
-    Mirpur-12, Dhaka 1216
+    {\LARGE\bfseries Pranta Kumer Pandit}\\[2mm]
+    Computer Science and Engineering Undergraduate\\[2mm]
+    +880 1793-725875 \;\textbar\;
+    \href{mailto:prantakumerpandit@gmail.com}{prantakumerpandit@gmail.com}\\[1mm]
+    \href{https://github.com/pranta2003}{github.com/pranta2003}\\[1mm]
+    \href{https://www.linkedin.com/in/pranta-kumer-pandit-997718383/}{linkedin.com/in/pranta-kumer-pandit}\\[1mm]
+    \href{https://my-portfolio-tau-jade-91.vercel.app}{my-portfolio-tau-jade-91.vercel.app}
 \end{minipage}%
 \hfill
 \raisebox{-0.5\height}{%
-\begin{minipage}[t]{0.28\textwidth}
+\begin{minipage}[t]{0.25\textwidth}
     \centering
-    \includegraphics[width=4cm,height=5cm]{pranta_img.jpeg}
-\end{minipage}
+    \includegraphics[width=3.3cm,height=4.2cm,keepaspectratio]{pranta_img.jpeg}
+\end{minipage}%
 }
 
-\vspace{10pt}
+\vspace{8pt}
 
-% ---------------- Career Objective ----------------
-\section*{Career Objective}
-Motivated and detail-oriented Computer Science and Engineering (CSE) student seeking an entry-level position or internship where I can effectively utilize my computer operation, data entry, and office software skills while gaining practical experience and contributing to organizational growth.
+% ---------------- Summary ----------------
+\section*{Summary}
+Computer Science undergraduate building toward full-stack software engineering, with hands-on experience across backend systems, frontend development, REST APIs, and database-backed systems. Skilled in Java and Spring Boot, Spring Security and JWT authentication, frontend development, and Python-based machine learning projects involving NLP and semantic embeddings. Focused on building practical, deployable software.
 
-% ---------------- Education ----------------
-\section*{Educational Qualification}
-
-\textbf{Bachelor of Science (B.Sc.) in Computer Science \& Engineering (CSE)}\\
-Bangladesh University of Business and Technology (BUBT)\\
-Result: 3.01 / 4.00 \hfill Passing Year: Continue
-
-\vspace{6pt}
-
-\textbf{Higher Secondary Certificate (HSC)}\\
-Adamjee Cantonment College\\
-Board: Dhaka, GPA: 5.00 \hfill Passing Year: 2021
-
-\vspace{6pt}
-
-\textbf{Secondary School Certificate (SSC)}\\
-Khalishpur M.L. High School\\
-Board: Jessore, GPA: 5.00 \hfill Passing Year: 2019
-
-% ---------------- Skills ----------------
-\section*{Skills}
-\begin{itemize}
-    \item Programming Languages: C, C++, Python, JavaScript, Java.
-    \item Frontend Technologies: HTML, CSS, JavaScript, React.js, Next.js.
-    \item Database: MySQL (Basic), Firebase.
-    \item Tools: MS Word, Excel, PowerPoint, VS Code, Kaggle, Google Colab.
-    \item Soft Skills: Effective Communication, Leadership, Team Collaboration, Adaptability, Time Management, Creativity.
-\end{itemize}
-
-% ---------------- Academic Knowledge ----------------
-\section*{Academic Knowledge}
-\begin{itemize}
-    \item \textbf{Programming and Algorithms:} Programming fundamentals, algorithmic problem solving, data structures (arrays, stacks, queues, linked lists), searching and sorting techniques, and basic complexity analysis.
-
-    \item \textbf{Database Systems:} Database Management Systems (DBMS), relational databases, SQL fundamentals, tables, keys, and relationships.
-
-    \item \textbf{Operating Systems and Networks:} Process management, memory management, CPU scheduling, LAN/WAN, IP addressing, and HTTP/HTTPS basics.
-
-    \item \textbf{Microprocessors and Microcontrollers:} Architecture, instruction sets, interfacing, I/O, and embedded systems.
-
-    \item \textbf{Software Engineering:} Software Development Life Cycle (SDLC), requirements analysis, and basic system documentation.
-
-    \item \textbf{Internet of Things (IoT):} Basics of IoT including sensors, actuators, microcontroller-based systems, and real-time data communication.
-
-    \item \textbf{Cybersecurity:} Common security threats, authentication mechanisms, and basic security principles.
-
-    \item \textbf{Discrete Mathematics:} Basics of logic, sets, relations, and graphs.
+% ---------------- Technical Skills ----------------
+\section*{Technical Skills}
+\begin{itemize}[label={}]
+    \item \textbf{Languages:} C, C++, Java, Python, JavaScript, SQL
+    \item \textbf{Frontend:} HTML, CSS, JavaScript, Tailwind CSS
+    \item \textbf{Backend:} Java, Spring Boot, Spring Security, REST APIs, JWT Authentication, Role-Based Access Control
+    \item \textbf{Databases:} MySQL
+    \item \textbf{Tools \& DevOps:} Git, GitHub, Maven, Docker, Swagger/OpenAPI
+    \item \textbf{Machine Learning:} Python, Pandas, NumPy, Scikit-learn, Sentence-BERT (SBERT), XGBoost, Gradio
 \end{itemize}
 
 % ---------------- Projects ----------------
 \section*{Projects}
 \begin{itemize}[label=\textbullet]
-    \item \textbf{Fire-Quake Detection System:} Built an IoT-based system using multiple sensors (MQ2, DHT11, MPU6050) and NodeMCU (ESP8266) to monitor environmental conditions in real time. Implemented alert notifications through the Blynk platform along with local alarms for safety alerts.
+    \item \textbf{Community Health Checkup \& Tele-medicine Portal --- Backend} \hfill
+    \href{https://github.com/pranta2003/Community_Health_Checkup_and_Tele-medicine_Portal-Backend-Part}{GitHub}\\
+    \textit{Java, Spring Boot, Spring Security, MySQL, Maven, Docker}
+    \begin{itemize}
+        \item Designed a layered Spring Boot backend to support patient, doctor, and administrator workflows for a community healthcare and telemedicine system.
+        \item Implemented stateless JWT authentication and role-based access control for Admin, Doctor, and Patient roles.
+        \item Built REST APIs for appointments and health utilities, including BMI calculation and glucose tracking; documented endpoints with Swagger/OpenAPI and containerized the service with Docker and MySQL.
+        \item Integrated Jitsi Meet for real-time video consultations between doctors and patients.
+    \end{itemize}
 
-    \item \textbf{Women Safety Mobile Application:} Developed a women safety mobile application using React with emergency features such as shake detection, automatic calling, and live location sharing. Enabled quick alerts to predefined contacts during critical situations.
+    \item \textbf{Community Health Checkup \& Tele-medicine Portal --- Frontend} \hfill
+    \href{https://github.com/pranta2003/Community_Health_Checkup_and_Tele-medicine_Portal-Frontend_Part-}{GitHub}\\
+    \textit{HTML, CSS, JavaScript, Tailwind CSS}
+    \begin{itemize}
+        \item Built a responsive single-page interface with role-based dashboards for patients, doctors, and administrators.
+        \item Developed appointment booking and teleconsultation flows with dynamic Jitsi Meet call links.
+        \item Implemented lightweight client-side navigation and interactions in vanilla JavaScript and integrated the frontend with the backend API.
+    \end{itemize}
+
+    \item \textbf{Smart Bachelor Life}\\
+    \textit{Team Capstone Project --- Private Repository}
+    \begin{itemize}
+        \item Collaborated with a team to develop a software capstone project; the repository is private and shared with teammates.
+    \end{itemize}
+
+    \item \textbf{ATS Score Prediction} \hfill
+    \href{https://github.com/pranta2003/ATS-Score-Prediction}{GitHub}\\
+    \textit{Python, Sentence-BERT, XGBoost, Scikit-learn, Gradio}
+    \begin{itemize}
+        \item Built a regression pipeline using 384-dimensional Sentence-BERT embeddings for resumes and job descriptions, combined into 768 features to predict ATS compatibility scores.
+        \item Compared Linear Regression, KNN, Random Forest, and XGBoost with 5-fold cross-validation; selected XGBoost based on validation performance.
+        \item Tuned XGBoost using cross-validation and deployed an interactive Gradio application on Render.
+    \end{itemize}
+\end{itemize}
+
+% ---------------- Experience ----------------
+\section*{Experience}
+\textbf{Udvashito Shikhanir Coaching Center} \hfill March 2024 -- Present\\
+\textit{English Teacher, Grades 8--10} \hfill Dhaka, Bangladesh
+\begin{itemize}
+    \item Plan and deliver structured English lessons, adapting materials and pace to different learning levels.
+    \item Prepare presentations and written materials, applying clear communication and documentation skills.
+\end{itemize}
+
+\textbf{Samit Coaching Center} \hfill Jan 2023 -- Apr 2023\\
+\textit{English Teacher, Grades 7--10} \hfill Dhaka, Bangladesh
+\begin{itemize}
+    \item Taught English and supported curriculum planning and student progress tracking.
+\end{itemize}
+
+% ---------------- Education ----------------
+\section*{Education}
+\textbf{Bangladesh University of Business and Technology (BUBT)} \hfill 2023 -- 2027\\
+Bachelor of Science (Honours) in Computer Science \& Engineering\\
+CGPA: 3.54 / 4.00 (Running)
+
+\vspace{4pt}
+\textbf{Notre Dame College, Mymensingh} \hfill 2021\\
+H.S.C. (Science), Mymensingh Board \hfill GPA: 5.00 / 5.00
+
+\vspace{4pt}
+\textbf{Ghatail Govt. High School} \hfill 2019\\
+S.S.C. (Science), Dhaka Board \hfill GPA: 4.78 / 5.00
+
+% ---------------- Achievements ----------------
+\section*{Achievements}
+\begin{itemize}
+    \item Participated in three intra-university programming contests.
+    \item Participated in a university-organized hackathon.
+    \item Led the student debate team in the National English Olympiad (2021).
 \end{itemize}
 
 % ---------------- Languages ----------------
-\section*{Language Proficiency}
-\begin{itemize}[label=\textbullet]
-    \item \textbf{Bengali:} Mother Tongue
-    \item \textbf{English:} Proficient
-\end{itemize}
+\section*{Languages}
+Bangla (Native) \quad $|$ \quad English (Conversational) \quad $|$ \quad Hindi (Conversational) \quad $|$ \quad French (Basic)
 
-% ---------------- Personal Info ----------------
-\section*{Personal Information}
-\begin{tabular}{@{}ll@{}}
-Father's Name & : Habibur Rahman \\
-Mother's Name & : Sheuly Khatun \\
-Permanent Address & : Vill: Hat-Khalispur, P.O: Khalishpur, P.S: Moheshpur, Dist: Jhenaidah \\
-Present Address & : Road: 20, Block: C, Mirpur 12, Dhaka-1216 \\
-Date of Birth & : 26-Aug-2003 \\
-Religion & : Islam \\
-Marital Status & : Single \\
-Blood Group & : O+ \\
-Gender & : Male \\
-\end{tabular}
-
-% ---------------- Declaration ----------------
+% ---------------- Declaration and Signature ----------------
 \section*{Declaration}
 I hereby declare that the information provided above is true and correct to the best of my knowledge and belief.
 
-\vspace{10pt}
-\textbf{Signature:} \\[2mm]
-\includegraphics[width=3cm]{pranta_sign_img.jpeg}
+\vspace{6pt}
+\textbf{Signature:}\\[1mm]
+\includegraphics[width=2.8cm,height=1.2cm,keepaspectratio]{pranta_sign_img.jpeg}
 
 \end{document}
