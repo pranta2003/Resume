@@ -1,203 +1,139 @@
-\documentclass[letterpaper,11pt]{article}
+\documentclass[11pt,a4paper]{article}
 
-% Compile with XeLaTeX or LuaLaTeX. Use Times New Roman when installed;
-% TeX Gyre Termes is a metrically compatible Times-style fallback.
-\usepackage{fontspec}
-\IfFontExistsTF{Times New Roman}{
-  \setmainfont{Times New Roman}
-}{
-  \setmainfont{TeX Gyre Termes}
-}
-
-\usepackage[top=0.65in,bottom=0.65in,left=0.7in,right=0.7in]{geometry}
+% ---------------- Packages ----------------
+\usepackage[left=1in,right=1in,top=1in,bottom=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{newtxtext,newtxmath}
 \usepackage{titlesec}
-\usepackage[usenames,dvipsnames]{color}
 \usepackage{enumitem}
-\usepackage[hidelinks]{hyperref}
-\usepackage[english]{babel}
-\usepackage{tabularx}
 \usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage{hyperref}
 \usepackage{array}
 
-\pagestyle{empty}
-\urlstyle{same}
-\raggedbottom
-\raggedright
-\setlength{\tabcolsep}{0in}
+\hypersetup{
+    colorlinks=true,
+    urlcolor=blue
+}
+
 \setlength{\parindent}{0pt}
+\setlist[itemize]{noitemsep, topsep=2pt}
 
-% Section formatting
-\titleformat{\section}{\raggedright\large\bfseries}{}{0em}{}[\vspace{2pt}\color{black}\titlerule\vspace{2pt}]
-\titlespacing*{\section}{0pt}{7pt}{3pt}
+% ---------------- Section Style ----------------
+\titleformat{\section}
+{\large\bfseries}
+{}
+{0em}
+{}
+[\titlerule]
 
-\newcommand{\resumeItem}[1]{\item{#1}}
-
-\newcommand{\resumeSubheading}[4]{
-  \item
-    \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{\large #1} & \textbf{#2} \\
-      \textit{#3} & \textit{#4} \\
-    \end{tabular*}\vspace{2pt}
-}
-
-\newcommand{\resumeProjectHeading}[3]{
-  \item
-    \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-      \textbf{\large #1} & \textbf{#2} \\
-    \end{tabular*}
-    \textit{#3}
-    \vspace{2pt}
-}
-
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in,label={},itemsep=6pt,topsep=0pt]}
-\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.22in,itemsep=2pt,parsep=0pt,topsep=2pt,label=\textbullet]}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{1pt}}
-
-% Add the supplied portrait to the repository as photo.jpg. The placeholder
-% keeps the source compilable until the image is added.
-\newcommand{\resumePhoto}{%
-  \IfFileExists{photo.jpg}{%
-    \fbox{\includegraphics[width=1.12in,height=1.38in,keepaspectratio]{photo.jpg}}%
-  }{%
-    \fbox{\parbox[c][1.38in][c]{1.12in}{\centering\small Add portrait\\as photo.jpg}}%
-  }%
-}
-
+% ---------------- Document ----------------
 \begin{document}
-
-%----------HEADER----------
 \noindent
-\begin{minipage}[c]{1.35in}
-  \centering
-  \resumePhoto
+\begin{minipage}[t]{0.68\textwidth}
+    \vspace{0pt}
+    \textbf{\LARGE Mehedi Hassan} \\[1mm]
+    mehedihassanalif2003@gmail.com \;\textbar\; 01781111990 \\ 
+    Mirpur-12, Dhaka 1216
 \end{minipage}%
 \hfill
-\begin{minipage}[c]{\dimexpr\textwidth-1.48in\relax}
-  \centering
-  {\Huge\bfseries Pranta Kumer Pandit}\\[7pt]
-  \normalsize
-  +880 1793-725875 \quad $|$ \quad
-  \href{mailto:prantakumerpandit@gmail.com}{prantakumerpandit@gmail.com}\\[4pt]
-  \href{https://github.com/pranta2003}{github.com/pranta2003} \quad $|$ \quad
-  \href{https://www.linkedin.com/in/pranta-kumer-pandit-997718383/}{linkedin.com/in/pranta-kumer-pandit}\\[4pt]
-  \href{https://my-portfolio-tau-jade-91.vercel.app}{my-portfolio-tau-jade-91.vercel.app}
+\raisebox{-0.5\height}{%
+\begin{minipage}[t]{0.28\textwidth}
+    \centering
+    \includegraphics[width=4cm,height=5cm]{pranta_img.jpeg}
 \end{minipage}
-\vspace{4pt}
+}
 
-%-----------SUMMARY-----------
-\section{Summary}
-Computer Science undergraduate building toward full-stack software engineering, with hands-on experience across backend systems, frontend development, REST APIs, and database-backed systems. Skilled in Java/Spring Boot with Spring Security and JWT authentication, HTML/CSS/JavaScript frontend development, and Python-based machine learning projects involving NLP and semantic embeddings. Focused on building real, deployable software rather than isolated coursework exercises.
+\vspace{10pt}
 
-%-----------SKILLS-----------
-\section{Technical Skills}
-\begin{itemize}[leftmargin=0.0in,label={},itemsep=5pt,topsep=2pt]
-  \item{\textbf{Languages:} C, C++, Java, Python, JavaScript, SQL}
-  \item{\textbf{Frontend:} HTML, CSS, JavaScript, Tailwind CSS}
-  \item{\textbf{Backend:} Java, Spring Boot, Spring Security, REST APIs, JWT Authentication, Role-Based Access Control}
-  \item{\textbf{Databases:} MySQL}
-  \item{\textbf{Tools \& DevOps:} Git, GitHub, Maven, Docker, Swagger/OpenAPI}
-  \item{\textbf{Machine Learning:} Python, Pandas, NumPy, Scikit-learn, Sentence-BERT (SBERT), XGBoost, Gradio}
+% ---------------- Career Objective ----------------
+\section*{Career Objective}
+Motivated and detail-oriented Computer Science and Engineering (CSE) student seeking an entry-level position or internship where I can effectively utilize my computer operation, data entry, and office software skills while gaining practical experience and contributing to organizational growth.
+
+% ---------------- Education ----------------
+\section*{Educational Qualification}
+
+\textbf{Bachelor of Science (B.Sc.) in Computer Science \& Engineering (CSE)}\\
+Bangladesh University of Business and Technology (BUBT)\\
+Result: 3.01 / 4.00 \hfill Passing Year: Continue
+
+\vspace{6pt}
+
+\textbf{Higher Secondary Certificate (HSC)}\\
+Adamjee Cantonment College\\
+Board: Dhaka, GPA: 5.00 \hfill Passing Year: 2021
+
+\vspace{6pt}
+
+\textbf{Secondary School Certificate (SSC)}\\
+Khalishpur M.L. High School\\
+Board: Jessore, GPA: 5.00 \hfill Passing Year: 2019
+
+% ---------------- Skills ----------------
+\section*{Skills}
+\begin{itemize}
+    \item Programming Languages: C, C++, Python, JavaScript, Java.
+    \item Frontend Technologies: HTML, CSS, JavaScript, React.js, Next.js.
+    \item Database: MySQL (Basic), Firebase.
+    \item Tools: MS Word, Excel, PowerPoint, VS Code, Kaggle, Google Colab.
+    \item Soft Skills: Effective Communication, Leadership, Team Collaboration, Adaptability, Time Management, Creativity.
 \end{itemize}
 
-%-----------PROJECTS (PAGE 1)-----------
-\section{Projects}
-\resumeSubHeadingListStart
+% ---------------- Academic Knowledge ----------------
+\section*{Academic Knowledge}
+\begin{itemize}
+    \item \textbf{Programming and Algorithms:} Programming fundamentals, algorithmic problem solving, data structures (arrays, stacks, queues, linked lists), searching and sorting techniques, and basic complexity analysis.
 
-  \resumeProjectHeading
-    {Community Health Checkup \& Tele-medicine Portal --- Backend}
-    {\href{https://github.com/pranta2003/Community_Health_Checkup_and_Tele-medicine_Portal-Backend-Part}{GitHub}}
-    {Java, Spring Boot, Spring Security, MySQL, Maven, Docker}
-  \resumeItemListStart
-    \resumeItem{Designed a layered backend architecture (Controller / Service / Repository) in Spring Boot to manage patient, doctor, and admin workflows for a community healthcare and telemedicine system.}
-    \resumeItem{Implemented stateless authentication with Spring Security and JWT, enforcing role-based access control across Admin, Doctor, and Patient roles to secure every REST endpoint.}
-    \resumeItem{Built RESTful APIs for appointment management and health utilities (BMI calculation, glucose tracking), documented the API surface with Swagger/OpenAPI, and containerized the service with Docker alongside a MySQL database.}
-    \resumeItem{Integrated the Jitsi Meet API to support real-time video teleconsultation sessions between doctors and patients.}
-  \resumeItemListEnd
+    \item \textbf{Database Systems:} Database Management Systems (DBMS), relational databases, SQL fundamentals, tables, keys, and relationships.
 
-  \resumeProjectHeading
-    {Community Health Checkup \& Tele-medicine Portal --- Frontend}
-    {\href{https://github.com/pranta2003/Community_Health_Checkup_and_Tele-medicine_Portal-Frontend_Part-}{GitHub}}
-    {HTML, CSS, JavaScript, Tailwind CSS}
-  \resumeItemListStart
-    \resumeItem{Built a fully responsive single-page frontend with distinct role-based dashboards for Patient, Doctor, and Admin, translating backend workflows into a clear, usable interface.}
-    \resumeItem{Developed the appointment booking and teleconsultation flow end-to-end, generating dynamic Jitsi Meet video-call links so patients and doctors could connect directly from the dashboard.}
-    \resumeItem{Structured client-side navigation and interactivity in vanilla JavaScript to keep the application lightweight and dependency-free while integrating cleanly with the backend API.}
-  \resumeItemListEnd
+    \item \textbf{Operating Systems and Networks:} Process management, memory management, CPU scheduling, LAN/WAN, IP addressing, and HTTP/HTTPS basics.
 
-\resumeSubHeadingListEnd
+    \item \textbf{Microprocessors and Microcontrollers:} Architecture, instruction sets, interfacing, I/O, and embedded systems.
 
-\newpage
-\vspace*{0pt}
+    \item \textbf{Software Engineering:} Software Development Life Cycle (SDLC), requirements analysis, and basic system documentation.
 
-%-----------PROJECTS (PAGE 2)-----------
-\resumeSubHeadingListStart
+    \item \textbf{Internet of Things (IoT):} Basics of IoT including sensors, actuators, microcontroller-based systems, and real-time data communication.
 
-  \resumeProjectHeading
-    {Smart Bachelor Life}
-    {}
-    {Team Capstone Project --- Private Repository}
-  \resumeItemListStart
-    \resumeItem{Collaborative software project developed with a team; repository is private and shared with teammates.}
-  \resumeItemListEnd
+    \item \textbf{Cybersecurity:} Common security threats, authentication mechanisms, and basic security principles.
 
-  \resumeProjectHeading
-    {ATS Score Prediction}
-    {\href{https://github.com/pranta2003/ATS-Score-Prediction}{GitHub}}
-    {Python, Sentence-BERT, XGBoost, Scikit-learn, Gradio}
-  \resumeItemListStart
-    \resumeItem{Built a regression pipeline that converts resumes and job descriptions into 384-dimensional Sentence-BERT embeddings, concatenating them into 768 combined features to predict a numerical ATS compatibility score.}
-    \resumeItem{Trained and compared Linear Regression, KNN, Random Forest, and XGBoost regressors using 5-fold cross-validation, selecting XGBoost as the final model based on validation performance.}
-    \resumeItem{Tuned XGBoost hyperparameters via cross-validation and deployed the model through a Gradio web interface on Render for interactive resume-to-job-description scoring.}
-  \resumeItemListEnd
-
-\resumeSubHeadingListEnd
-
-%-----------EXPERIENCE-----------
-\section{Experience}
-\resumeSubHeadingListStart
-
-  \resumeSubheading
-    {Udvashito Shikhanir Coaching Center}{March 2024 -- Present}
-    {English Teacher, Grades 8--10}{Dhaka, Bangladesh}
-  \resumeItemListStart
-    \resumeItem{Plan and deliver structured English lessons for grades 8--10, adapting content and pace to different learning levels.}
-    \resumeItem{Build clear presentations and written materials, strengthening documentation and communication skills applicable to technical work.}
-  \resumeItemListEnd
-
-  \resumeSubheading
-    {Samit Coaching Center}{Jan 2023 -- April 2023}
-    {English Teacher, Grades 7--10}{Dhaka, Bangladesh}
-  \resumeItemListStart
-    \resumeItem{Taught English to grades 7--10, managing curriculum planning and student progress tracking.}
-  \resumeItemListEnd
-
-\resumeSubHeadingListEnd
-
-%-----------EDUCATION-----------
-\section{Education}
-\resumeSubHeadingListStart
-  \resumeSubheading
-    {Bangladesh University of Business and Technology (BUBT)}{2023 -- 2027}
-    {Bachelor of Science (Honours) in Computer Science \& Engineering}{CGPA: 3.54 / 4.00 (Running)}
-  \resumeSubheading
-    {Notre Dame College, Mymensingh}{2021}
-    {H.S.C (Science) --- Mymensingh Board}{GPA: 5.00 / 5.00}
-  \resumeSubheading
-    {Ghatail Govt. High School}{2019}
-    {S.S.C (Science) --- Dhaka Board}{GPA: 4.78 / 5.00}
-\resumeSubHeadingListEnd
-
-%-----------ACHIEVEMENTS-----------
-\section{Achievements}
-\begin{itemize}[leftmargin=0.22in,itemsep=3pt,topsep=1pt,label=\textbullet]
-  \item Participated in 3 intra-university programming contests.
-  \item Participated in a university-organized hackathon.
-  \item Led the student debate team in the National English Olympiad (2021).
+    \item \textbf{Discrete Mathematics:} Basics of logic, sets, relations, and graphs.
 \end{itemize}
 
-%-----------LANGUAGES-----------
-\section{Languages}
-Bangla (Native) \quad $|$ \quad English (Conversational) \quad $|$ \quad Hindi (Conversational) \quad $|$ \quad French (Basic)
+% ---------------- Projects ----------------
+\section*{Projects}
+\begin{itemize}[label=\textbullet]
+    \item \textbf{Fire-Quake Detection System:} Built an IoT-based system using multiple sensors (MQ2, DHT11, MPU6050) and NodeMCU (ESP8266) to monitor environmental conditions in real time. Implemented alert notifications through the Blynk platform along with local alarms for safety alerts.
+
+    \item \textbf{Women Safety Mobile Application:} Developed a women safety mobile application using React with emergency features such as shake detection, automatic calling, and live location sharing. Enabled quick alerts to predefined contacts during critical situations.
+\end{itemize}
+
+% ---------------- Languages ----------------
+\section*{Language Proficiency}
+\begin{itemize}[label=\textbullet]
+    \item \textbf{Bengali:} Mother Tongue
+    \item \textbf{English:} Proficient
+\end{itemize}
+
+% ---------------- Personal Info ----------------
+\section*{Personal Information}
+\begin{tabular}{@{}ll@{}}
+Father's Name & : Habibur Rahman \\
+Mother's Name & : Sheuly Khatun \\
+Permanent Address & : Vill: Hat-Khalispur, P.O: Khalishpur, P.S: Moheshpur, Dist: Jhenaidah \\
+Present Address & : Road: 20, Block: C, Mirpur 12, Dhaka-1216 \\
+Date of Birth & : 26-Aug-2003 \\
+Religion & : Islam \\
+Marital Status & : Single \\
+Blood Group & : O+ \\
+Gender & : Male \\
+\end{tabular}
+
+% ---------------- Declaration ----------------
+\section*{Declaration}
+I hereby declare that the information provided above is true and correct to the best of my knowledge and belief.
+
+\vspace{10pt}
+\textbf{Signature:} \\[2mm]
+\includegraphics[width=3cm]{pranta_sign_img.jpeg}
 
 \end{document}
